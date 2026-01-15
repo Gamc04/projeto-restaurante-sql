@@ -1,207 +1,196 @@
-🍽️ Projeto Restaurante – SQL | Análise de Dados & BI
+🍽️ Projeto Restaurante – SQL, Python, BigQuery & BI
 
-Este projeto simula o banco de dados e a operação analítica de um restaurante, desenvolvido com foco em modelagem relacional, manipulação de dados, análise SQL e Business Intelligence.
+Este repositório apresenta um projeto completo de dados, simulando um ambiente real de Analytics / BI, desde a modelagem relacional em SQL até a construção de dashboards analíticos.
 
-O objetivo é demonstrar competências em SQL aplicado a cenários reais, organização de dados e construção de métricas de negócio que geram insights relevantes para análise de dados e apoio à tomada de decisão.
+O projeto demonstra competências em:
 
-🎯 Objetivos do Projeto
+SQL (modelagem, consultas, views e funções)
 
-Simular um ambiente real de dados de um restaurante
+Python para dados (Pandas, ETL, métricas)
 
-Aplicar boas práticas de modelagem relacional
+BigQuery (camada analítica / GOLD)
 
-Desenvolver consultas SQL para análise exploratória e analítica
+Looker Studio (visualização)
 
-Criar métricas de negócio utilizadas em BI
+🎯 Objetivo do Projeto
 
-Estruturar dados para visualização em dashboards
+Construir um pipeline analítico de ponta a ponta para um restaurante fictício, permitindo:
 
-🏗️ Arquitetura do Projeto
-MySQL (dados transacionais)
+Estruturação e modelagem dos dados
+
+Exploração e transformação dos dados
+
+Criação de métricas de negócio reutilizáveis
+
+Armazenamento analítico otimizado
+
+Visualização clara para tomada de decisão
+
+Projeto desenvolvido para estudo, prática profissional e portfólio.
+
+🧱 Arquitetura Geral
+Banco Relacional (SQL)
         ↓
-BigQuery (camada analítica e views)
+BigQuery (view fato_pedidos)
         ↓
-Looker Studio (dashboards interativos)
+Python (Pandas)
+  ├─ Extract
+  ├─ Transform
+  ├─ EDA
+  ├─ Metrics
+  ├─ Load
+        ↓
+BigQuery (Camada GOLD)
+        ↓
+Looker Studio (Dashboards)
 
-🗄️ Modelagem do Banco de Dados
+🗂️ Estrutura do Repositório
+projeto-restaurante-sql/
+├── 01_modelagem/            # Criação de tabelas e modelagem relacional
+├── 02_manipulacao_dados/    # INSERTs, UPDATEs, DELETEs
+├── 03_consultas_basicas/    # SELECT, filtros, ordenações
+├── 04_condicionais/         # CASE WHEN, regras de negócio
+├── 05_agregacoes/           # GROUP BY, métricas agregadas
+├── 06_joins/                # JOINs entre tabelas
+├── 07_views_e_funcoes/      # Views analíticas e funções SQL
+│
+├── 08_python/               # Pipeline Python (ETL & Métricas)
+│   ├── 01_extract/          # Extração do BigQuery
+│   ├── 02_transform/        # Limpeza e tipagem (Pandas)
+│   ├── 03_eda/              # Análise exploratória e validações
+│   ├── 04_metrics/          # KPIs de negócio
+│   ├── 05_exports/          # CSV / Parquet finais
+│   ├── 06_load/             # Carga para BigQuery (GOLD)
+│   ├── README_python.md     # Documentação do pipeline Python
+│   └── requirements.txt
+│
+├── assets/                  # Imagens, prints e diagramas
+├── .gitattributes
+└── README.md                # Documentação principal
 
-O banco de dados restaurante foi modelado para representar operações reais do negócio, incluindo as seguintes entidades:
+🛢️ Camada SQL
 
-Clientes
+A parte SQL do projeto cobre desde o básico até o avançado, com foco em clareza e progressão didática:
 
-Funcionários
+Modelagem de tabelas
 
-Produtos
+Manipulação de dados
 
-Pedidos
+Consultas analíticas
 
-Informações adicionais de produtos
+Agregações
 
-Conceitos aplicados
+JOINs
 
-Chaves primárias e estrangeiras
+Views e funções reutilizáveis
 
-Integridade referencial
+A view principal utilizada no pipeline é:
 
-Tipos de dados adequados
+restaurante.fato_pedidos
 
-Relacionamentos entre tabelas
 
-Organização orientada à performance e legibilidade
+Ela consolida todas as informações necessárias para análise.
 
-📁 Organização do Repositório
-01_modelagem           → Criação das tabelas e estrutura do banco
-02_manipulacao_dados   → Inserts, updates e ajustes de dados
-03_consultas_basicas   → Consultas SQL simples
-04_condicionais        → Condições, filtros e lógica SQL
-05_agregacoes          → Consultas com funções de agregação
-06_joins               → Consultas envolvendo múltiplas tabelas
-07_views_e_funcoes     → Views, functions e consultas avançadas
+🐍 Pipeline Python (08_python)
 
-🧠 Conteúdos Abordados
-🔧 Manipulação de Dados
+O pipeline Python é responsável por:
 
-INSERT, UPDATE e DELETE
+Extrair dados do BigQuery
 
-Controle de integridade dos dados
+Limpar, tipar e enriquecer os dados
 
-Ajustes de estrutura para diferentes cenários de negócio
+Validar qualidade (EDA)
 
-🔍 Consultas SQL
+Gerar métricas de negócio
 
-SELECT simples e condicionais
+Exportar dados analíticos
 
-Filtros com WHERE, LIKE, IN e BETWEEN
+Carregar a camada GOLD no BigQuery
 
-Ordenação e paginação (ORDER BY, LIMIT, OFFSET)
+📄 Documentação detalhada:
+👉 08_python/README_python.md
 
-📊 Agregações e Análises
+📊 Métricas de Negócio (Camada GOLD)
 
-Funções de agregação: COUNT, AVG, MIN, MAX
+As métricas são calculadas fora do BI, garantindo performance e consistência.
 
-GROUP BY e HAVING
+KPIs Gerais
 
-Análises por categoria, cliente, produto e fornecedor
+Faturamento total
 
-🔗 Joins e Relacionamentos
+Total de pedidos
 
-INNER JOIN e LEFT JOIN
+Ticket médio
 
-Consultas envolvendo múltiplas tabelas
+Quantidade total de itens
 
-Identificação de clientes sem pedidos
+KPIs Diários
 
-Total de pedidos por cliente
+Faturamento diário
 
-🧩 Views e Funções
+Pedidos diários
 
-Criação de VIEW para simplificação de análises
+Ticket médio diário
 
-Construção de funções SQL para encapsular regras de negócio
+KPIs Mensais
 
-Uso de EXPLAIN para compreensão de performance das consultas
+Faturamento mensal
 
-📈 Camada Analítica e BI
+Pedidos mensais
 
-Os dados foram estruturados no BigQuery, com a criação de uma view analítica (fato_pedidos), utilizada como base para os dashboards.
+Ticket médio mensal
 
-Métricas de Negócio Criadas
+Essas tabelas são consumidas diretamente pelo BI.
 
-Receita Total
+📈 Visualização – Looker Studio
 
-Quantidade de Pedidos
+O Looker Studio se conecta exclusivamente à camada GOLD, garantindo:
 
-Ticket Médio
+Dashboards mais leves
 
-Itens Vendidos
+Lógica centralizada fora do BI
 
-Itens por Pedido (média)
+Facilidade de manutenção e evolução
 
-Receita por Categoria
+Exemplos de análises:
 
-Receita por Produto
+Receita ao longo do tempo
 
-Receita por Cliente
+Performance por categoria
 
-Receita e Ticket Médio por Funcionário
+Produtos mais vendidos
 
-Distribuição de Status dos Pedidos
-
-Análise de Dias de Pico e Dias Fracos
-
-## 📊 Dashboards – Looker Studio
-
-O projeto conta com dashboards interativos organizados em páginas temáticas.
-
-Abaixo estão algumas visualizações do dashboard desenvolvido no Looker Studio,
-utilizando dados estruturados no BigQuery a partir da view analítica `fato_pedidos`.
-
----
-
-### 📈 Página 1 – Visão Geral
-KPIs principais e visão macro do desempenho do restaurante.
-
-![Página 1 - Visão Geral](assets/dashboards/pagina_1_visao_geral.png)
-
----
-
-### 🍽️ Página 2 – Análise de Produtos
-Análise de performance de produtos por receita e quantidade vendida.
-
-![Página 2 - Análise de Produtos](assets/dashboards/pagina_2_produtos.png)
-
----
-
-### 👥 Página 3 – Clientes & Funcionários
-Análise de clientes mais relevantes e performance por funcionário.
-
-![Página 3 - Clientes e Funcionários](assets/dashboards/pagina_3_clientes_funcionarios.png)
-
----
-
-### ⚙️ Página 4 – Operacional & Eficiência
-Indicadores operacionais, ticket médio, volume de pedidos e status ao longo do tempo.
-
-![Página 4 - Operacional](assets/dashboards/pagina_4_operacional.png)
-
-
-💡 Principais Insights Obtidos
-
-Pratos principais concentram a maior parte da receita
-
-Alguns clientes geram alto valor mesmo com poucos pedidos
-
-Funcionários apresentam diferenças entre volume de vendas e ticket médio
-
-Dias de pico possuem comportamento distinto de consumo
-
-A maioria dos pedidos é concluída, com pontos específicos de atenção operacional
-
-🚀 Próximas Evoluções
-
-Análises avançadas com Python (Pandas)
-
-Curva ABC de produtos
-
-Análise de recorrência de clientes
-
-Simulação de cenários promocionais
-
-Otimização de consultas e custos no BigQuery
+Tendência de pedidos e ticket médio
 
 🛠️ Tecnologias Utilizadas
 
-SQL (MySQL)
+SQL
+
+Python (Pandas)
 
 Google BigQuery
 
 Looker Studio
 
-GitHub
+Git & GitHub
+
+✅ Boas Práticas Aplicadas
+
+Separação entre SQL, Python e BI
+
+Métricas fora do dashboard
+
+Camada GOLD para consumo analítico
+
+Tipagem explícita de dados
+
+Pipeline reprodutível
+
+Estrutura organizada e documentada
 
 👤 Autor
 
 Gustavo Carvalho
 Analista de Dados / BI
 
-Projeto desenvolvido para fins de estudo, prática profissional e portfólio.
+Projeto desenvolvido para fins de aprendizado, prática profissional e portfólio, simulando um ambiente real de dados corporativos.
