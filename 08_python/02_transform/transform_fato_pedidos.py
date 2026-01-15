@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 
-# ==========================
-# CONFIGURAÇÕES
-# ==========================
+
 INPUT_PARQUET = "fato_pedidos.parquet"
 INPUT_CSV = "fato_pedidos.csv"
 
@@ -17,9 +15,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 EXPORT_PATH = os.path.join(BASE_DIR, "../05_exports")
 os.makedirs(EXPORT_PATH, exist_ok=True)
 
-# ==========================
-# FUNÇÕES AUXILIARES
-# ==========================
+
 def padronizar_colunas(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df.columns = (
@@ -34,17 +30,13 @@ def padronizar_colunas(df: pd.DataFrame) -> pd.DataFrame:
 def converter_tipos_e_limpar(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
-    # ---------
-    # Datas (tenta detectar colunas comuns)
-    # ---------
+
     possiveis_datas = ["data_pedido", "data", "dt_pedido", "data_criacao"]
     for col in possiveis_datas:
         if col in df.columns:
             df[col] = pd.to_datetime(df[col], errors="coerce")
 
-    # ---------
-    # Numéricos (tenta detectar colunas comuns)
-    # ---------
+
     possiveis_valores = ["valor_total", "total", "valor", "preco_total", "receita"]
     for col in possiveis_valores:
         if col in df.columns:
@@ -56,9 +48,8 @@ def converter_tipos_e_limpar(df: pd.DataFrame) -> pd.DataFrame:
     if "quantidade" in df.columns:
         df["quantidade"] = pd.to_numeric(df["quantidade"], errors="coerce")
 
-    # ---------
-    # Remover linhas críticas nulas (se existir data e valor)
-    # ---------
+
+
     col_data = next((c for c in ["data_pedido", "data", "dt_pedido", "data_criacao"] if c in df.columns), None)
     col_valor = next((c for c in ["valor_total", "total", "valor", "preco_total", "receita"] if c in df.columns), None)
 
@@ -74,7 +65,7 @@ def converter_tipos_e_limpar(df: pd.DataFrame) -> pd.DataFrame:
 def criar_colunas_derivadas(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
-    # Detecta data e valor “principais”
+
     col_data = next((c for c in ["data_pedido", "data", "dt_pedido", "data_criacao"] if c in df.columns), None)
     col_valor = next((c for c in ["valor_total", "total", "valor", "preco_total", "receita"] if c in df.columns), None)
 
@@ -92,10 +83,9 @@ def criar_colunas_derivadas(df: pd.DataFrame) -> pd.DataFrame:
         df["dia"] = df[col_data].dt.day
         df["dia_semana"] = df[col_data].dt.day_name()
 
-        # Útil para métricas por mês no formato YYYY-MM
+
         df["ano_mes"] = df[col_data].dt.to_period("M").astype(str)
 
-    # Ticket unitário (se fizer sentido)
     if "valor_liquido" in df.columns and "quantidade" in df.columns:
         # evita divisão por zero
         df["ticket_unitario"] = df["valor_liquido"] / df["quantidade"].replace(0, pd.NA)
@@ -103,20 +93,18 @@ def criar_colunas_derivadas(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def validar(df: pd.DataFrame) -> None:
-    # Validação leve (sem assumir demais)
+
     if "valor_liquido" in df.columns:
-        # Permite 0, mas não permite negativo (desconto não pode “criar” valor negativo)
+
         min_val = df["valor_liquido"].min()
         assert pd.isna(min_val) or min_val >= 0, f"valor_liquido negativo encontrado: {min_val}"
 
-# ==========================
-# FUNÇÃO PRINCIPAL
-# ==========================
+
 def main():
     parquet_path = os.path.join(EXPORT_PATH, INPUT_PARQUET)
     csv_path = os.path.join(EXPORT_PATH, INPUT_CSV)
 
-    # Preferência: Parquet (melhor tipo e performance)
+
     if os.path.exists(parquet_path):
         df = pd.read_parquet(parquet_path)
         fonte = "parquet"
@@ -145,8 +133,6 @@ def main():
     print("Linhas e colunas (tratado):", df.shape)
     print(df.head())
 
-# ==========================
-# EXECUÇÃO
-# ==========================
+
 if __name__ == "__main__":
     main()

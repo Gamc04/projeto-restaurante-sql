@@ -10,10 +10,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CREDENTIALS_PATH = os.path.join(BASE_DIR, "../01_extract/credentials.json")
 EXPORT_PATH = os.path.join(BASE_DIR, "../05_exports")
 
-# Arquivos (ajuste se os seus nomes forem diferentes)
+
 PATH_DIARIOS_CSV = os.path.join(EXPORT_PATH, "kpis_diarios.csv")
 PATH_GERAIS_CSV = os.path.join(EXPORT_PATH, "kpis_gerais.csv")
-PATH_MENSAIS_CSV = os.path.join(EXPORT_PATH, "kpis_mensais.csv")  # <-- gere em CSV também
+PATH_MENSAIS_CSV = os.path.join(EXPORT_PATH, "kpis_mensais.csv")  
 
 TABLE_DIARIOS_RAW = "kpis_diarios_raw"
 TABLE_GERAIS_RAW = "kpis_gerais_raw"
@@ -70,9 +70,7 @@ def create_view(client: bigquery.Client, view_name: str, sql_body: str):
 def main():
     client = get_client()
 
-    # ==========================
-    # 1) DIÁRIOS (CSV -> RAW STRING -> VIEW GOLD)
-    # ==========================
+
     raw_diarios_id = load_csv_as_raw(
         client,
         PATH_DIARIOS_CSV,
@@ -105,9 +103,6 @@ WHERE COALESCE(
 """,
     )
 
-    # ==========================
-    # 2) GERAIS (CSV -> RAW STRING -> VIEW GOLD)
-    # ==========================
     raw_gerais_id = load_csv_as_raw(
         client,
         PATH_GERAIS_CSV,
@@ -135,9 +130,7 @@ FROM `{raw_gerais_id}`
 """,
     )
 
-    # ==========================
-    # 3) MENSAIS (CSV -> RAW STRING -> VIEW GOLD)
-    # ==========================
+
     if not os.path.exists(PATH_MENSAIS_CSV):
         raise FileNotFoundError(
             f"❌ Não achei {PATH_MENSAIS_CSV}. Gere também kpis_mensais.csv no metrics."
