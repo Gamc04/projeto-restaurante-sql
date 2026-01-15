@@ -46,27 +46,27 @@ Looker Studio (Dashboards)
 
 🗂️ Estrutura do Repositório
 projeto-restaurante-sql/
-├── 01_modelagem/            # Criação de tabelas e modelagem relacional
-├── 02_manipulacao_dados/    # INSERTs, UPDATEs, DELETEs
-├── 03_consultas_basicas/    # SELECT, filtros, ordenações
-├── 04_condicionais/         # CASE WHEN, regras de negócio
-├── 05_agregacoes/           # GROUP BY, métricas agregadas
-├── 06_joins/                # JOINs entre tabelas
-├── 07_views_e_funcoes/      # Views analíticas e funções SQL
+├── 01_modelagem/            
+├── 02_manipulacao_dados/    
+├── 03_consultas_basicas/    
+├── 04_condicionais/         
+├── 05_agregacoes/           
+├── 06_joins/               
+├── 07_views_e_funcoes/      
 │
-├── 08_python/               # Pipeline Python (ETL & Métricas)
-│   ├── 01_extract/          # Extração do BigQuery
-│   ├── 02_transform/        # Limpeza e tipagem (Pandas)
-│   ├── 03_eda/              # Análise exploratória e validações
-│   ├── 04_metrics/          # KPIs de negócio
-│   ├── 05_exports/          # CSV / Parquet finais
-│   ├── 06_load/             # Carga para BigQuery (GOLD)
-│   ├── README_python.md     # Documentação do pipeline Python
+├── 08_python/               
+│   ├── 01_extract/          
+│   ├── 02_transform/        
+│   ├── 03_eda/              
+│   ├── 04_metrics/          
+│   ├── 05_exports/          
+│   ├── 06_load/             
+│   ├── README_python.md     
 │   └── requirements.txt
 │
 ├── assets/                  # Imagens, prints e diagramas
 ├── .gitattributes
-└── README.md                # Documentação principal
+└── README.md                
 
 🛢️ Camada SQL
 
