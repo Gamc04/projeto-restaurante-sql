@@ -129,49 +129,41 @@ Distribuição de Status dos Pedidos
 
 Análise de Dias de Pico e Dias Fracos
 
-📊 Dashboards – Looker Studio
+## 📊 Dashboards – Looker Studio
 
-O projeto conta com dashboards interativos organizados em páginas temáticas:
+O projeto conta com dashboards interativos organizados em páginas temáticas.
 
-📌 Página 1 – Visão Geral
+Abaixo estão algumas visualizações do dashboard desenvolvido no Looker Studio,
+utilizando dados estruturados no BigQuery a partir da view analítica `fato_pedidos`.
 
-KPIs principais
+---
 
-Receita ao longo do tempo
+### 📈 Página 1 – Visão Geral
+KPIs principais e visão macro do desempenho do restaurante.
 
-Receita por categoria
+![Página 1 - Visão Geral](assets/dashboards/pagina_1_visao_geral.png)
 
-Top produtos por receita
+---
 
-📌 Página 2 – Análise de Produtos
+### 🍽️ Página 2 – Análise de Produtos
+Análise de performance de produtos por receita e quantidade vendida.
 
-Top 10 produtos por receita
+![Página 2 - Análise de Produtos](assets/dashboards/pagina_2_produtos.png)
 
-Top 10 produtos por quantidade vendida
+---
 
-Receita por categoria
+### 👥 Página 3 – Clientes & Funcionários
+Análise de clientes mais relevantes e performance por funcionário.
 
-📌 Página 3 – Clientes & Funcionários
+![Página 3 - Clientes e Funcionários](assets/dashboards/pagina_3_clientes_funcionarios.png)
 
-Clientes com mais pedidos
+---
 
-Receita por cliente
+### ⚙️ Página 4 – Operacional & Eficiência
+Indicadores operacionais, ticket médio, volume de pedidos e status ao longo do tempo.
 
-Receita por funcionário
+![Página 4 - Operacional](assets/dashboards/pagina_4_operacional.png)
 
-Distribuição de status dos pedidos
-
-📌 Página 4 – Operacional & Eficiência
-
-Pedidos por dia (picos e vales)
-
-Ticket médio por dia
-
-Itens por pedido (média)
-
-Status dos pedidos ao longo do tempo
-
-Ticket médio e volume por funcionário
 
 💡 Principais Insights Obtidos
 
