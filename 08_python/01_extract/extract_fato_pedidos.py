@@ -1,34 +1,68 @@
+import os
 import pandas as pd
 from google.cloud import bigquery
-from pathlib import Path
+from google.oauth2 import service_account
 
+# ==========================
+# CONFIGURAÇÕES
+# ==========================
 PROJECT_ID = "carbide-crowbar-483718-i8"
 DATASET = "restaurante"
 VIEW = "fato_pedidos"
 
-def main():
-    print("Iniciando extração do BigQuery...")
+# Caminho do JSON (mesma pasta do script)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CREDENTIALS_PATH = os.path.join(BASE_DIR, "credentials.json")
 
-    client = bigquery.Client(project=PROJECT_ID)
+# ==========================
+# FUNÇÃO PRINCIPAL
+# ==========================
+def main():
+    # Cria credencial a partir do JSON
+    credentials = service_account.Credentials.from_service_account_file(
+        CREDENTIALS_PATH
+    )
+
+    # Cliente BigQuery autenticado
+    client = bigquery.Client(
+        credentials=credentials,
+        project=PROJECT_ID
+    )
 
     query = f"""
-    SELECT *
-    FROM `{PROJECT_ID}.{DATASET}.{VIEW}`
+        SELECT *
+        FROM `{PROJECT_ID}.{DATASET}.{VIEW}`
     """
 
-    print("Executando query...")
     df = client.query(query).to_dataframe()
-    print("Query executada. Convertendo para DataFrame...")
 
-    export_dir = Path(__file__).resolve().parents[1] / "05_exports"
-    export_dir.mkdir(parents=True, exist_ok=True)
+    # ==========================
+    # CORREÇÃO DE TIPOS (DATE do BigQuery)
+    # ==========================
+    if "data_pedido" in df.columns:
+        df["data_pedido"] = pd.to_datetime(df["data_pedido"], errors="coerce")
 
-    df.to_parquet(export_dir / "fato_pedidos.parquet", index=False)
-    df.to_csv(export_dir / "fato_pedidos.csv", index=False, encoding="utf-8")
+    # Cria pasta de export se não existir
+    export_path = os.path.join(BASE_DIR, "../05_exports")
+    os.makedirs(export_path, exist_ok=True)
 
-    print("✅ Extração concluída!")
-    print("Shape:", df.shape)
+    # Exporta dados
+    df.to_parquet(
+        os.path.join(export_path, "fato_pedidos.parquet"),
+        index=False
+    )
+    df.to_csv(
+        os.path.join(export_path, "fato_pedidos.csv"),
+        index=False,
+        encoding="utf-8"
+    )
+
+    print("✅ Extração concluída com sucesso!")
+    print("Linhas e colunas:", df.shape)
     print(df.head())
 
+# ==========================
+# EXECUÇÃO
+# ==========================
 if __name__ == "__main__":
     main()

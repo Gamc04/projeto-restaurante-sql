@@ -1,0 +1,50 @@
+id_pedido,data_pedido,status,id_cliente,nome_cliente,email_cliente,id_funcionario,nome_funcionario,id_produto,nome_produto,categoria,quantidade,preco_unitario,receita,valor_liquido,ano,mes,dia,dia_semana,ano_mes,ticket_unitario
+2,2024-07-01,Concluído,3,Rafael Costa,rafael.costa@email.com,4,Carla Mendes,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.0,42.0,2024,7,1,Monday,2024-07,42.0
+21,2024-07-04,Concluído,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.0,42.0,2024,7,4,Thursday,2024-07,42.0
+41,2024-07-06,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,8,Fernanda Rocha,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.0,42.0,2024,7,6,Saturday,2024-07,42.0
+3,2024-07-01,Concluído,6,Fernanda Lima,fernanda.lima@email.com,7,Pedro Martins,3,Moqueca Baiana,Prato Principal,1,37.500000000,37.5,37.5,2024,7,1,Monday,2024-07,37.5
+24,2024-07-05,Concluído,22,Leonardo Alves,leonardo.alves@email.com,8,Fernanda Rocha,5,Bacalhau à Brás,Prato Principal,1,38.000000000,38.0,38.0,2024,7,5,Friday,2024-07,38.0
+44,2024-07-06,Pendente,4,Camila Rodrigues,camila.rodrigues@email.com,4,Carla Mendes,5,Bacalhau à Brás,Prato Principal,1,38.000000000,38.0,38.0,2024,7,6,Saturday,2024-07,38.0
+10,2024-07-03,Concluído,6,Fernanda Lima,fernanda.lima@email.com,7,Pedro Martins,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.0,36.0,2024,7,3,Wednesday,2024-07,36.0
+29,2024-07-05,Concluído,19,Henrique Silva,henrique.silva@email.com,8,Fernanda Rocha,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.0,36.0,2024,7,5,Friday,2024-07,36.0
+48,2024-07-06,Concluído,12,Sandra Gomes,sandra.gomes@email.com,4,Carla Mendes,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.0,36.0,2024,7,6,Saturday,2024-07,36.0
+12,2024-07-03,Concluído,11,Roberto Nunes,roberto.nunes@email.com,8,Fernanda Rocha,12,Salada Caprese,Entrada,1,22.000000000,22.0,22.0,2024,7,3,Wednesday,2024-07,22.0
+31,2024-07-05,Concluído,24,Carlos Eduardo,carlos.eduardo@email.com,4,Carla Mendes,12,Salada Caprese,Entrada,1,22.000000000,22.0,22.0,2024,7,5,Friday,2024-07,22.0
+14,2024-07-03,Concluído,27,Ricardo Mendonça,ricardo.mendonca@email.com,4,Carla Mendes,14,Frango à Parmegiana,Prato Principal,1,35.000000000,35.0,35.0,2024,7,3,Wednesday,2024-07,35.0
+33,2024-07-05,Concluído,4,Camila Rodrigues,camila.rodrigues@email.com,7,Pedro Martins,14,Frango à Parmegiana,Prato Principal,1,35.000000000,35.0,35.0,2024,7,5,Friday,2024-07,35.0
+19,2024-07-04,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,19,Mousse de Maracujá,Sobremesa,1,12.000000000,12.0,12.0,2024,7,4,Thursday,2024-07,12.0
+38,2024-07-06,Pendente,14,Vanessa Moraes,vanessa.moraes@email.com,4,Carla Mendes,19,Mousse de Maracujá,Sobremesa,1,12.000000000,12.0,12.0,2024,7,6,Saturday,2024-07,12.0
+1,2024-07-01,Concluído,1,Lucas Silva,lucas.silva@email.com,4,Carla Mendes,1,Feijoada,Prato Principal,2,29.900000000,59.8,59.8,2024,7,1,Monday,2024-07,29.9
+40,2024-07-06,Pendente,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,1,Feijoada,Prato Principal,2,29.900000000,59.8,59.8,2024,7,6,Saturday,2024-07,29.9
+22,2024-07-05,Concluído,11,Roberto Nunes,roberto.nunes@email.com,7,Pedro Martins,3,Moqueca Baiana,Prato Principal,2,37.500000000,75.0,75.0,2024,7,5,Friday,2024-07,37.5
+42,2024-07-06,Pendente,4,Camila Rodrigues,camila.rodrigues@email.com,8,Fernanda Rocha,3,Moqueca Baiana,Prato Principal,2,37.500000000,75.0,75.0,2024,7,6,Saturday,2024-07,37.5
+5,2024-07-02,Pendente,10,Patricia Almeida,patricia.almeida@email.com,8,Fernanda Rocha,5,Bacalhau à Brás,Prato Principal,2,38.000000000,76.0,76.0,2024,7,2,Tuesday,2024-07,38.0
+8,2024-07-02,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,4,Carla Mendes,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.0,10.0,2024,7,2,Tuesday,2024-07,5.0
+27,2024-07-05,Concluído,1,Lucas Silva,lucas.silva@email.com,7,Pedro Martins,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.0,10.0,2024,7,5,Friday,2024-07,5.0
+47,2024-07-06,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,8,Fernanda Rocha,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.0,10.0,2024,7,6,Saturday,2024-07,5.0
+13,2024-07-03,Concluído,24,Carlos Eduardo,carlos.eduardo@email.com,4,Carla Mendes,13,Polenta Mole com Ragú de Linguiça,Prato Principal,2,28.000000000,56.0,56.0,2024,7,3,Wednesday,2024-07,28.0
+32,2024-07-05,Concluído,12,Sandra Gomes,sandra.gomes@email.com,4,Carla Mendes,13,Polenta Mole com Ragú de Linguiça,Prato Principal,2,28.000000000,56.0,56.0,2024,7,5,Friday,2024-07,28.0
+15,2024-07-03,Concluído,17,João Pedro,joao.pedro@email.com,7,Pedro Martins,15,Salmão Grelhado,Prato Principal,2,42.000000000,84.0,84.0,2024,7,3,Wednesday,2024-07,42.0
+34,2024-07-06,Concluído,9,Marcos Ribeiro,marcos.ribeiro@email.com,7,Pedro Martins,15,Salmão Grelhado,Prato Principal,2,42.000000000,84.0,84.0,2024,7,6,Saturday,2024-07,42.0
+17,2024-07-04,Concluído,13,Tiago Souza,tiago.souza@email.com,8,Fernanda Rocha,17,Suco de Maracujá,Bebida,2,8.000000000,16.0,16.0,2024,7,4,Thursday,2024-07,8.0
+36,2024-07-06,Pendente,5,Eduardo Santos,eduardo.santos@email.com,8,Fernanda Rocha,17,Suco de Maracujá,Bebida,2,8.000000000,16.0,16.0,2024,7,6,Saturday,2024-07,8.0
+20,2024-07-04,Concluído,2,Ana Paula,ana.paula@email.com,4,Carla Mendes,20,Pudim de Leite,Sobremesa,2,10.000000000,20.0,20.0,2024,7,4,Thursday,2024-07,10.0
+39,2024-07-06,Concluído,19,Henrique Silva,henrique.silva@email.com,7,Pedro Martins,20,Pudim de Leite,Sobremesa,2,10.000000000,20.0,20.0,2024,7,6,Saturday,2024-07,10.0
+4,2024-07-01,Concluído,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.0,135.0,2024,7,1,Monday,2024-07,45.0
+23,2024-07-05,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,8,Fernanda Rocha,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.0,135.0,2024,7,5,Friday,2024-07,45.0
+43,2024-07-06,Concluído,21,Giovanna Rocha,giovanna.rocha@email.com,4,Carla Mendes,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.0,135.0,2024,7,6,Saturday,2024-07,45.0
+7,2024-07-02,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,7,Pastel de Carne,Aperitivo,3,5.000000000,15.0,15.0,2024,7,2,Tuesday,2024-07,5.0
+26,2024-07-05,Concluído,28,Elisa Carvalho,elisa.carvalho@email.com,4,Carla Mendes,7,Pastel de Carne,Aperitivo,3,5.000000000,15.0,15.0,2024,7,5,Friday,2024-07,5.0
+46,2024-07-06,Pendente,25,Fábio Lopes,fabio.lopes@email.com,7,Pedro Martins,7,Pastel de Carne,Aperitivo,3,5.000000000,15.0,15.0,2024,7,6,Saturday,2024-07,5.0
+11,2024-07-03,Concluído,9,Marcos Ribeiro,marcos.ribeiro@email.com,8,Fernanda Rocha,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.0,96.0,2024,7,3,Wednesday,2024-07,32.0
+30,2024-07-05,Concluído,15,Daniel Oliveira,daniel.oliveira@email.com,8,Fernanda Rocha,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.0,96.0,2024,7,5,Friday,2024-07,32.0
+49,2024-07-06,Pendente,10,Patricia Almeida,patricia.almeida@email.com,4,Carla Mendes,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.0,96.0,2024,7,6,Saturday,2024-07,32.0
+16,2024-07-04,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,7,Pedro Martins,16,Caipirinha de Limão,Bebida,3,15.000000000,45.0,45.0,2024,7,4,Thursday,2024-07,15.0
+35,2024-07-06,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,8,Fernanda Rocha,16,Caipirinha de Limão,Bebida,3,15.000000000,45.0,45.0,2024,7,6,Saturday,2024-07,15.0
+6,2024-07-02,Concluído,15,Daniel Oliveira,daniel.oliveira@email.com,8,Fernanda Rocha,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.0,26.0,2024,7,2,Tuesday,2024-07,6.5
+25,2024-07-05,Concluído,19,Henrique Silva,henrique.silva@email.com,4,Carla Mendes,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.0,26.0,2024,7,5,Friday,2024-07,6.5
+45,2024-07-06,Concluído,13,Tiago Souza,tiago.souza@email.com,7,Pedro Martins,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.0,26.0,2024,7,6,Saturday,2024-07,6.5
+18,2024-07-04,Concluído,25,Fábio Lopes,fabio.lopes@email.com,8,Fernanda Rocha,18,Chopp Gelado,Bebida,4,7.500000000,30.0,30.0,2024,7,4,Thursday,2024-07,7.5
+37,2024-07-06,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,18,Chopp Gelado,Bebida,4,7.500000000,30.0,30.0,2024,7,6,Saturday,2024-07,7.5
+9,2024-07-02,Concluído,4,Camila Rodrigues,camila.rodrigues@email.com,7,Pedro Martins,9,Empada de Palmito,Aperitivo,5,6.000000000,30.0,30.0,2024,7,2,Tuesday,2024-07,6.0
+28,2024-07-05,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,7,Pedro Martins,9,Empada de Palmito,Aperitivo,5,6.000000000,30.0,30.0,2024,7,5,Friday,2024-07,6.0
