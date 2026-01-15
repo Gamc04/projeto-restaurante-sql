@@ -3,9 +3,6 @@ import pandas as pd
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
-# ==========================
-# CONFIGURAÇÕES
-# ==========================
 PROJECT_ID = "carbide-crowbar-483718-i8"
 DATASET = "restaurante"
 VIEW = "fato_pedidos"
@@ -14,9 +11,7 @@ VIEW = "fato_pedidos"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CREDENTIALS_PATH = os.path.join(BASE_DIR, "credentials.json")
 
-# ==========================
-# FUNÇÃO PRINCIPAL
-# ==========================
+
 def main():
     # Cria credencial a partir do JSON
     credentials = service_account.Credentials.from_service_account_file(
@@ -36,9 +31,7 @@ def main():
 
     df = client.query(query).to_dataframe()
 
-    # ==========================
-    # CORREÇÃO DE TIPOS (DATE do BigQuery)
-    # ==========================
+
     if "data_pedido" in df.columns:
         df["data_pedido"] = pd.to_datetime(df["data_pedido"], errors="coerce")
 
@@ -61,8 +54,6 @@ def main():
     print("Linhas e colunas:", df.shape)
     print(df.head())
 
-# ==========================
-# EXECUÇÃO
-# ==========================
+
 if __name__ == "__main__":
     main()
