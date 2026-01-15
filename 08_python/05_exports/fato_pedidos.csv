@@ -1,0 +1,50 @@
+id_pedido,data_pedido,status,id_cliente,nome_cliente,email_cliente,id_funcionario,nome_funcionario,id_produto,nome_produto,categoria,quantidade,preco_unitario,receita
+2,2024-07-01,Concluído,3,Rafael Costa,rafael.costa@email.com,4,Carla Mendes,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.000000000
+21,2024-07-04,Concluído,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.000000000
+41,2024-07-06,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,8,Fernanda Rocha,2,Picanha na Chapa,Prato Principal,1,42.000000000,42.000000000
+3,2024-07-01,Concluído,6,Fernanda Lima,fernanda.lima@email.com,7,Pedro Martins,3,Moqueca Baiana,Prato Principal,1,37.500000000,37.500000000
+24,2024-07-05,Concluído,22,Leonardo Alves,leonardo.alves@email.com,8,Fernanda Rocha,5,Bacalhau à Brás,Prato Principal,1,38.000000000,38.000000000
+44,2024-07-06,Pendente,4,Camila Rodrigues,camila.rodrigues@email.com,4,Carla Mendes,5,Bacalhau à Brás,Prato Principal,1,38.000000000,38.000000000
+10,2024-07-03,Concluído,6,Fernanda Lima,fernanda.lima@email.com,7,Pedro Martins,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.000000000
+29,2024-07-05,Concluído,19,Henrique Silva,henrique.silva@email.com,8,Fernanda Rocha,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.000000000
+48,2024-07-06,Concluído,12,Sandra Gomes,sandra.gomes@email.com,4,Carla Mendes,10,Risoto de Camarão,Prato Principal,1,36.000000000,36.000000000
+12,2024-07-03,Concluído,11,Roberto Nunes,roberto.nunes@email.com,8,Fernanda Rocha,12,Salada Caprese,Entrada,1,22.000000000,22.000000000
+31,2024-07-05,Concluído,24,Carlos Eduardo,carlos.eduardo@email.com,4,Carla Mendes,12,Salada Caprese,Entrada,1,22.000000000,22.000000000
+14,2024-07-03,Concluído,27,Ricardo Mendonça,ricardo.mendonca@email.com,4,Carla Mendes,14,Frango à Parmegiana,Prato Principal,1,35.000000000,35.000000000
+33,2024-07-05,Concluído,4,Camila Rodrigues,camila.rodrigues@email.com,7,Pedro Martins,14,Frango à Parmegiana,Prato Principal,1,35.000000000,35.000000000
+19,2024-07-04,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,19,Mousse de Maracujá,Sobremesa,1,12.000000000,12.000000000
+38,2024-07-06,Pendente,14,Vanessa Moraes,vanessa.moraes@email.com,4,Carla Mendes,19,Mousse de Maracujá,Sobremesa,1,12.000000000,12.000000000
+1,2024-07-01,Concluído,1,Lucas Silva,lucas.silva@email.com,4,Carla Mendes,1,Feijoada,Prato Principal,2,29.900000000,59.800000000
+40,2024-07-06,Pendente,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,1,Feijoada,Prato Principal,2,29.900000000,59.800000000
+22,2024-07-05,Concluído,11,Roberto Nunes,roberto.nunes@email.com,7,Pedro Martins,3,Moqueca Baiana,Prato Principal,2,37.500000000,75.000000000
+42,2024-07-06,Pendente,4,Camila Rodrigues,camila.rodrigues@email.com,8,Fernanda Rocha,3,Moqueca Baiana,Prato Principal,2,37.500000000,75.000000000
+5,2024-07-02,Pendente,10,Patricia Almeida,patricia.almeida@email.com,8,Fernanda Rocha,5,Bacalhau à Brás,Prato Principal,2,38.000000000,76.000000000
+8,2024-07-02,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,4,Carla Mendes,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.000000000
+27,2024-07-05,Concluído,1,Lucas Silva,lucas.silva@email.com,7,Pedro Martins,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.000000000
+47,2024-07-06,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,8,Fernanda Rocha,8,Pastel de Queijo,Aperitivo,2,5.000000000,10.000000000
+13,2024-07-03,Concluído,24,Carlos Eduardo,carlos.eduardo@email.com,4,Carla Mendes,13,Polenta Mole com Ragú de Linguiça,Prato Principal,2,28.000000000,56.000000000
+32,2024-07-05,Concluído,12,Sandra Gomes,sandra.gomes@email.com,4,Carla Mendes,13,Polenta Mole com Ragú de Linguiça,Prato Principal,2,28.000000000,56.000000000
+15,2024-07-03,Concluído,17,João Pedro,joao.pedro@email.com,7,Pedro Martins,15,Salmão Grelhado,Prato Principal,2,42.000000000,84.000000000
+34,2024-07-06,Concluído,9,Marcos Ribeiro,marcos.ribeiro@email.com,7,Pedro Martins,15,Salmão Grelhado,Prato Principal,2,42.000000000,84.000000000
+17,2024-07-04,Concluído,13,Tiago Souza,tiago.souza@email.com,8,Fernanda Rocha,17,Suco de Maracujá,Bebida,2,8.000000000,16.000000000
+36,2024-07-06,Pendente,5,Eduardo Santos,eduardo.santos@email.com,8,Fernanda Rocha,17,Suco de Maracujá,Bebida,2,8.000000000,16.000000000
+20,2024-07-04,Concluído,2,Ana Paula,ana.paula@email.com,4,Carla Mendes,20,Pudim de Leite,Sobremesa,2,10.000000000,20.000000000
+39,2024-07-06,Concluído,19,Henrique Silva,henrique.silva@email.com,7,Pedro Martins,20,Pudim de Leite,Sobremesa,2,10.000000000,20.000000000
+4,2024-07-01,Concluído,8,Juliana Machado,juliana.machado@email.com,7,Pedro Martins,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.000000000
+23,2024-07-05,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,8,Fernanda Rocha,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.000000000
+43,2024-07-06,Concluído,21,Giovanna Rocha,giovanna.rocha@email.com,4,Carla Mendes,4,Bobó de Camarão,Prato Principal,3,45.000000000,135.000000000
+7,2024-07-02,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,7,Pastel de Carne,Aperitivo,3,5.000000000,15.000000000
+26,2024-07-05,Concluído,28,Elisa Carvalho,elisa.carvalho@email.com,4,Carla Mendes,7,Pastel de Carne,Aperitivo,3,5.000000000,15.000000000
+46,2024-07-06,Pendente,25,Fábio Lopes,fabio.lopes@email.com,7,Pedro Martins,7,Pastel de Carne,Aperitivo,3,5.000000000,15.000000000
+11,2024-07-03,Concluído,9,Marcos Ribeiro,marcos.ribeiro@email.com,8,Fernanda Rocha,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.000000000
+30,2024-07-05,Concluído,15,Daniel Oliveira,daniel.oliveira@email.com,8,Fernanda Rocha,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.000000000
+49,2024-07-06,Pendente,10,Patricia Almeida,patricia.almeida@email.com,4,Carla Mendes,11,Escondidinho de Carne Seca,Prato Principal,3,32.000000000,96.000000000
+16,2024-07-04,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,7,Pedro Martins,16,Caipirinha de Limão,Bebida,3,15.000000000,45.000000000
+35,2024-07-06,Concluído,18,Larissa Fonseca,larissa.fonseca@email.com,8,Fernanda Rocha,16,Caipirinha de Limão,Bebida,3,15.000000000,45.000000000
+6,2024-07-02,Concluído,15,Daniel Oliveira,daniel.oliveira@email.com,8,Fernanda Rocha,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.000000000
+25,2024-07-05,Concluído,19,Henrique Silva,henrique.silva@email.com,4,Carla Mendes,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.000000000
+45,2024-07-06,Concluído,13,Tiago Souza,tiago.souza@email.com,7,Pedro Martins,6,Coxinha de Frango,Aperitivo,4,6.500000000,26.000000000
+18,2024-07-04,Concluído,25,Fábio Lopes,fabio.lopes@email.com,8,Fernanda Rocha,18,Chopp Gelado,Bebida,4,7.500000000,30.000000000
+37,2024-07-06,Concluído,22,Leonardo Alves,leonardo.alves@email.com,4,Carla Mendes,18,Chopp Gelado,Bebida,4,7.500000000,30.000000000
+9,2024-07-02,Concluído,4,Camila Rodrigues,camila.rodrigues@email.com,7,Pedro Martins,9,Empada de Palmito,Aperitivo,5,6.000000000,30.000000000
+28,2024-07-05,Concluído,7,Gustavo Pereira,gustavo.pereira@email.com,7,Pedro Martins,9,Empada de Palmito,Aperitivo,5,6.000000000,30.000000000
