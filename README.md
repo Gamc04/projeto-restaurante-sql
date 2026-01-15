@@ -64,7 +64,7 @@ projeto-restaurante-sql/
 │   ├── README_python.md     
 │   └── requirements.txt
 │
-├── assets/                  # Imagens, prints e diagramas
+├── assets/                  
 ├── .gitattributes
 └── README.md                
 
